@@ -1,0 +1,31 @@
+fasta_sequences = SeqIO.parse(open('last.fasta'),'fasta')
+sequences = []
+for fasta in fasta_sequences:
+    sequences.append(str(fasta.seq))
+    
+#seprating the sequences for easr of access
+seq_1 = sequences[0]
+seq_2 = sequences[1]
+seq_3 = sequences[2]
+seq_4 = sequences[3]
+seq_5 = sequences[4]
+seq_6 = sequences[5]
+seq_7 = sequences[6]
+seq_8 = sequences[7]
+seq_9 = sequences[8]
+seq_10 = sequences[9]
+#reference sequence
+seq_11 = sequences[10]
+# #setting up variables
+similarities = 0
+dissimilarities = 0
+
+#compareing elements in same index for all the sequences 
+for i in range(len(seq_1)):
+    if seq_1[i]==seq_2[i]==seq_3[i]==seq_4[i]==seq_5[i]==seq_6[i]==seq_7[i]==seq_8[i]==seq_9[i]==seq_10[i]==seq_11[i]:
+         similarities+=1
+    else:
+        dissimilarities+=1
+
+print("The number of similarities is: {}".format(similarities))
+print("The number of dissimilarities is: {}".format(dissimilarities))

@@ -1,0 +1,24 @@
+fasta_sequences = SeqIO.parse(open('variant_1.fasta'),'fasta')
+for fasta in fasta_sequences:
+    name, sequence = fasta.id, str(fasta.seq)
+
+print(len(sequence))
+#setting up variables
+A = 0
+C = 0
+G = 0
+T = 0
+for i in sequence:
+    if i=='A':
+        A+=1
+    elif i=='C':
+        C+=1
+    elif i=='G':
+        G+=1
+    else:
+        T+=1
+print(A)
+print(C)
+print(G)
+print(T)
+print(A+C+G+T)
